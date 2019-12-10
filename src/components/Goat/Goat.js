@@ -4,7 +4,7 @@ class Goat extends React.Component {
   render() {
     const { goat } = this.props;
     return (
-      <div className="card col-4">
+      <div className="card col-3 m-3">
         <img src={goat.imgUrl} className="card-img-top" alt={goat.name}/>
         <div className="card-body">
           <h5 className="card-title">{goat.name}</h5>
@@ -12,7 +12,7 @@ class Goat extends React.Component {
           <p className="card-text">{goat.description}</p>
         </div>
       </div>
-    )
+    );
   }
 }
 
