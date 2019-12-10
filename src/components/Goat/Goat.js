@@ -1,9 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import goatShape from '../../helpers/propz/goatShape';
 
 class Goat extends React.Component {
   static propTypes = {
     goat: goatShape.goatShape,
+    freeGoat: PropTypes.func,
+  }
+
+  freeGoatEvent = (e) => {
+    const { freeGoat, goat } = this.props;
+    e.preventDefault();
+    freeGoat(goat.id);
   }
 
   render() {
@@ -16,6 +24,7 @@ class Goat extends React.Component {
           <p className="card-text">{goat.age}</p>
           <p className="card-text">{goat.description}</p>
         </div>
+        <div className="card-footer" onClick={this.freeGoatEvent}><div className="btn btn-dark">Free Me</div></div>
       </div>
     );
   }
