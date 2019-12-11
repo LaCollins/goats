@@ -59,4 +59,9 @@ const getAGoat = (goatId) => {
   goats[goatIndex].isBusy = true;
 };
 
-export default { getGoats, freeAGoat, getAGoat };
+
+export default {
+  getGoats,
+  freeAGoat,
+  getAGoat,
+};
